@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d5dced"
+    tools:context=".activity.HomeActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/header"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-50dp"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="5dp"
+        app:cardBackgroundColor="#ff507d">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="30dp"
+            app:cardBackgroundColor="#d5dced">
+            <TextView
+                android:id="@+id/home_email"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/bebas_neue"
+                android:text="Email"
+                android:textSize="17dp"
+                android:textAlignment="center"
+                android:textColor="#ff507d" />
+        </androidx.cardview.widget.CardView>
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="365dp"
+            android:background="@drawable/logout"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        app:cardBackgroundColor="#ff507d"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        android:layout_below="@+id/header">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/get"/>
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:background="@drawable/update"/>
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="220dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/delete"/>
+    </androidx.cardview.widget.CardView>
+
+    <ListView
+        android:id="@+id/user_list"
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"/>
+
+</RelativeLayout>

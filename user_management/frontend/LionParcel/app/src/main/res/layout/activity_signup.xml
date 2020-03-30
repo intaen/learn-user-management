@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d5dced"
+    tools:context=".activity.LoginActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="3dp" >
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/logo"
+            android:layout_gravity="center_horizontal"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_name"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dp"
+                android:fontFamily="@font/inconsolata"
+                android:textColorHint="#ff507d"
+                android:hint="Name"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_username"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="170dp"
+                android:fontFamily="@font/inconsolata"
+                android:textColorHint="#ff507d"
+                android:hint="Username"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_email"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="240dp"
+                android:fontFamily="@font/inconsolata"
+                android:textColorHint="#ff507d"
+                android:hint="Email"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="300dp"
+            app:passwordToggleEnabled="true"
+            android:textColorHint="#ff507d">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signup_password"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inconsolata"
+                android:inputType="textPassword"
+                android:hint="Password"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="390dp"
+            android:background="@drawable/bg_corner"
+            android:fontFamily="@font/inconsolata"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:text="SIGN UP"/>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

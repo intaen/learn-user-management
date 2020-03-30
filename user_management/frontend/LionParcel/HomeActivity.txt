@@ -1,0 +1,42 @@
+package com.intanmarsjaf.lionparcel.activity
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Log
+import android.widget.ListView
+import com.example.e_tix.model.DefaultResponse
+import com.intanmarsjaf.lionparcel.R
+import com.intanmarsjaf.lionparcel.adapter.UserArrayAdapter
+import com.intanmarsjaf.lionparcel.config.RetrofitBuilder
+import com.intanmarsjaf.lionparcel.model.User
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+
+class HomeActivity : AppCompatActivity() {
+
+    lateinit var listView: ListView
+    lateinit var arrayAdapter: UserArrayAdapter
+    var listUser = mutableListOf<User>()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_home)
+
+        val userAPI = RetrofitBuilder.instance.getAllUser()
+            .enqueue(object : Callback<User>{
+                override fun onFailure(call: Call<User>, t: Throwable) {
+                    Log.e("[getAllUser] Error occured : ", t.message)
+                }
+
+                override fun onResponse(call: Call<User>, response: Response<User>) {
+                    Log.i("FETCH SUCCES", response.body().toString())
+                    if(response.isSuccessful){
+                        val getData = response.body()?.data
+                        for (i in 0 until getData!!.size) {
+                            listUser.add(getData[i])
+                        }
+                }
+            })
+    }
+}
