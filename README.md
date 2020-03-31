@@ -28,14 +28,6 @@ go run main.go
 + Then, open android studio and start emulator, klik l>, wait for awhile...
 + Because the database is empty, we have to add user
 + So, this is API for UserManagement (because, I use JWT, so you have to bring token everywhere):
-#### GetAll User (+Bearer Token)
-```sh
-http://localhost:5051/users
-```
-#### GetByID User (+Bearer Token)
-```sh
-http://localhost:5051/user/{id}
-```
 #### SignUp User
 ```sh
 http://localhost:5051/user/signup
@@ -57,6 +49,14 @@ http://localhost:5051/user/login
     "email": "example@gmail.com",
     "password": "123"
 }
+```
+#### GetAll User (+Bearer Token)
+```sh
+http://localhost:5051/users
+```
+#### GetByID User (+Bearer Token)
+```sh
+http://localhost:5051/user/{id}
 ```
 #### Update User (Put) (+Bearer Token)
 ```sh
