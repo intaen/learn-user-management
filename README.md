@@ -5,6 +5,7 @@
 So, ignore the project name wkwkwk, in this project I made mobile apps about manage the user like register, delete, update, and get the user. But, I'm still beginner, so i failed when I want to get the id :((
 I use two programming language to build this, golang for backend and kotlin for frontend. Stack in this apps are:
 #### Golang:
++ RestAPI
 + Gorm
 + Postgre
 + Env
